@@ -22,7 +22,7 @@ export const navbarStyles = css.global`
   }
 
   .navbar-menu::before {
-    background: #eee;
+    background: #f8f8f8;
     content: '';
     height: 100%;
     position: absolute;

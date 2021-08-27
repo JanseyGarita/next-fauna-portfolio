@@ -23,7 +23,7 @@ const ContactButton = () => {
           height: 50px;
           position: fixed;
           right: 22px;
-          top: 90%;
+          top: 88%;
           width: 50px;
           z-index: 2;
         }
