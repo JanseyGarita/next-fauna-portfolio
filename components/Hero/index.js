@@ -32,7 +32,7 @@ const Hero = ({ children, title }) => {
         h1 {
           color: ${colors.primary};
           font: normal normal 600 clamp(48px, 20vw, 130px) /
-              clamp(56px, 22vw, 180px) Times New Roman,
+              clamp(56px, 22vw, 150px) Times New Roman,
             serif;
         }
       `}</style>
