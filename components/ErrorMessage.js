@@ -1,4 +1,4 @@
-export default function ErrorMessage({ children }) {
+ const ErrorMessage=({ children })=> {
   return (
     <p className="flex items-center text-sm font-bold text-red-800 dark:text-red-400">
       <svg
@@ -17,3 +17,5 @@ export default function ErrorMessage({ children }) {
     </p>
   )
 }
+
+export default ErrorMessage
