@@ -8,17 +8,13 @@ const NavLink = ({ link, text, ...rest }) => {
   return (
     <>
       <li {...rest}>
-        <a
-          className={`fillable-link ${isActive}`}
-          href={`#${link}`}
-          data-color="#000"
-        >
+        <a className={isActive} href={`#${link}`}>
           {text}
         </a>
       </li>
       <style jsx>{`
         li {
-          margin: ${spacing.spacing02} ${spacing.spacing05};
+          margin: ${spacing.spacing02} ${spacing.spacing07};
         }
 
         a {
@@ -26,7 +22,6 @@ const NavLink = ({ link, text, ...rest }) => {
           font-family: sans-serif;
           letter-spacing: 0.055rem;
           opacity: 0.8;
-          padding: 0.35rem 0.5rem;
           transition: opacity 0.3s ease-in-out;
           text-transform: uppercase;
           z-index: 1;
