@@ -18,7 +18,7 @@ const Sidebar = ({ classNameWrapper = '', children }) => {
           top: 0;
         }
 
-        @media (min-width: ${breakpoints.tablet}) {
+        @media (min-width: ${breakpoints.desktop_sm}) {
           aside {
             display: block;
             z-index: 1;

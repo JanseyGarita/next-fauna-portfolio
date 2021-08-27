@@ -1,13 +1,22 @@
-import { spacing } from '@/variables/global'
 import useSections from 'hooks/useSections'
+import useWindowSize from 'hooks/useWindowSize'
 import { useEffect, useState } from 'react'
 import Scrollspy from 'react-scrollspy'
 import NavLink from './NavLink'
+import { navbarStyles } from './styles'
 
 const Navbar = () => {
   const { sections, getIDs } = useSections('.scrollspy')
   const [isOnTop, setIsOnTop] = useState(true)
+  const [isActive, setIsActive] = useState(false)
+  const { width } = useWindowSize()
   const ids = getIDs()
+
+  const handleToggle = () => {
+    if (width < 992) {
+      setIsActive(!isActive)
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,13 +27,19 @@ const Navbar = () => {
         setIsOnTop(true)
       }
     }
-    window.addEventListener('scroll', handleScroll)
+    if (width >= 992) {
+      window.addEventListener('scroll', handleScroll)
+    }
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [isOnTop])
+  }, [isOnTop, width])
 
   return (
     <>
-      <nav className={`navbar-menu${!isOnTop ? ' blur' : ''}`}>
+      <nav
+        className={`navbar-menu${!isOnTop && width >= 992 ? ' blur' : ''}${
+          isActive ? ' open' : ''
+        }`}
+      >
         {ids.length !== 0 && (
           <Scrollspy
             items={ids}
@@ -33,45 +48,27 @@ const Navbar = () => {
             componentTag="ul"
           >
             {sections.map((link, index) => (
-              <NavLink link={link.id} text={link.dataset.title} key={index} />
+              <NavLink
+                link={link.id}
+                text={link.dataset.title}
+                key={index}
+                onClick={handleToggle}
+              />
             ))}
           </Scrollspy>
         )}
+        {width < 992 && (
+          <button className="navbar-toggle" onClick={handleToggle}>
+            {[...new Array(3)].map((_, index) => (
+              <span key={index}></span>
+            ))}
+          </button>
+        )}
       </nav>
 
-      <style jsx global>{`
-        .navbar-menu {
-          left: 0;
-          position: fixed;
-          transition: backdrop-filter 0.3s ease;
-          width: 100%;
-          will-change: backdrop-filter;
-          z-index: 1;
-        }
-
-        .navbar-menu.blur {
-          -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-          background: #ffffff26;
-          border-radius: 10px;
-          border: 1px solid #ffffff2e;
-        }
-
-        .navbar-menu ul {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 0;
-          margin: 0;
-          padding: ${spacing.spacing07} 0;
-          position: relative;
-          transition: padding 0.2s ease;
-          will-change: padding;
-        }
-
-        .navbar-menu.blur ul {
-          padding: ${spacing.spacing05} 0;
-        }
-      `}</style>
+      <style jsx global>
+        {navbarStyles}
+      </style>
     </>
   )
 }

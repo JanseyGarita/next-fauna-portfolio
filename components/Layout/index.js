@@ -3,7 +3,7 @@ import Sidebar from 'components/Sidebar'
 import SiteLogo from 'components/Logo'
 import SideScrollSpy from 'components/SideScrollSpy'
 import Footer from 'components/Footer'
-import ContactButton from 'components/ContactButton'
+import ContactButton from 'components/Buttons/ContactButton'
 
 const Layout = ({ children }) => {
   return (
