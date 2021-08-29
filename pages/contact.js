@@ -126,13 +126,6 @@ const EntryForm = ({ onSubmit: onSubmitProp }) => {
           {isSubmitting ? <LoadingSpinner /> : 'Sign'}
         </button>
       </form>
-      {{
-        failed: () => <ErrorMessage>Something went wrong. :(</ErrorMessage>,
-
-        submitted: () => (
-          <SuccessMessage>Thanks for signing the guestbook.</SuccessMessage>
-        ),
-      }[formState]?.()}
     </>
   )
 }
