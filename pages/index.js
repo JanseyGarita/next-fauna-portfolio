@@ -67,7 +67,6 @@ const Index = ({ ghData, cwData }) => {
   )
 }
 
-
 export const getStaticProps = async () => {
   let options = getHeaders(process.env.GITHUB_TOKEN)
   /**
