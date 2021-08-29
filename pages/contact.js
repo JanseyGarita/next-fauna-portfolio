@@ -5,8 +5,6 @@ import formatDate from 'date-fns/format'
 import useSWR, { mutate } from 'swr'
 import 'tailwindcss/tailwind.css'
 import { listGuestbookEntries } from '@/lib/fauna'
-import SuccessMessage from '@/components/SuccessMessage'
-import ErrorMessage from '@/components/ErrorMessage'
 import LoadingSpinner from '@/components/LoadingSpinner'
 
 const ENTRIES_PATH = '/api/entries'
