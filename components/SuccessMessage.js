@@ -1,4 +1,4 @@
-export default function SuccessMessage({ children }) {
+const SuccessMessage=({ children })=> {
   return (
     <p className="flex items-center text-sm font-bold text-green-700 dark:text-green-400">
       <svg
@@ -17,3 +17,5 @@ export default function SuccessMessage({ children }) {
     </p>
   )
 }
+
+export default SuccessMessage

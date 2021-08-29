@@ -1,4 +1,4 @@
-export default function LoadingSpinner() {
+const LoadingSpinner=()=> {
   return (
     <svg
       className="animate-spin h-5 w-5 text-gray-900 dark:text-gray-100"
@@ -22,3 +22,5 @@ export default function LoadingSpinner() {
     </svg>
   )
 }
+
+export default LoadingSpinner
