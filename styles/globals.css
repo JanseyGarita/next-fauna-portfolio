@@ -80,3 +80,20 @@ p {
   letter-spacing: 0.25rem;
   text-transform: uppercase;
 }
+
+.animated-hover::before {
+  background-color: #0070f3;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  transition: top 0.3s ease;
+  width: 100%;
+  will-change: top;
+  z-index: -1;
+}
+
+.animated-hover:hover::before {
+  top: 0;
+}

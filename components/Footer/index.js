@@ -3,11 +3,7 @@ import { spacing } from '@/variables/global'
 const Footer = () => {
   return (
     <>
-      <footer
-        className="border-top py-4 scrollspy"
-        data-title="contact me"
-        id="contact-me"
-      >
+      <footer className="border-top py-4">
         <div>
           <p>Copyright © {new Date().getFullYear()} Jansey Garita</p>
         </div>

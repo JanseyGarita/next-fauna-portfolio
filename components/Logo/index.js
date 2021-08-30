@@ -16,7 +16,6 @@ const SiteLogo = () => {
           font-size: 30px;
           font-weight: 600;
           left: 29px;
-          pointer-events: none;
           position: fixed;
           top: 22px;
         }

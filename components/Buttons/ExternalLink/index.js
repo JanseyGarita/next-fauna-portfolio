@@ -3,7 +3,12 @@ import { colors, spacing } from '@/variables/global'
 const ExternalLink = ({ children: text, link }) => {
   return (
     <>
-      <a href={link} target="_blank" rel="noreferrer">
+      <a
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+        className="animated-hover"
+      >
         <span>{text}</span>
         <svg viewBox="0 0 11 5">
           <path
@@ -23,23 +28,6 @@ const ExternalLink = ({ children: text, link }) => {
           padding: ${spacing.spacing03} ${spacing.spacing05};
           position: relative;
           width: fit-content;
-        }
-
-        a::before {
-          background-color: ${colors.ternary};
-          content: '';
-          height: 100%;
-          left: 0;
-          position: absolute;
-          top: 100%;
-          transition: top 0.3s ease;
-          width: 100%;
-          will-change: top;
-          z-index: -1;
-        }
-
-        a:hover::before {
-          top: 0;
         }
 
         span {

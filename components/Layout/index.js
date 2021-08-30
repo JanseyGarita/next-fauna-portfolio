@@ -4,6 +4,7 @@ import SiteLogo from 'components/Logo'
 import SideScrollSpy from 'components/SideScrollSpy'
 import Footer from 'components/Footer'
 import ContactButton from 'components/Buttons/ContactButton'
+import ContactMe from '../Contact'
 
 const Layout = ({ children }) => {
   return (
@@ -14,7 +15,10 @@ const Layout = ({ children }) => {
           <SiteLogo />
           <SideScrollSpy />
         </Sidebar>
-        <div className="content w-100">{children}</div>
+        <div className="content w-100">
+          {children}
+          <ContactMe />
+        </div>
         <Sidebar />
       </main>
       <ContactButton />

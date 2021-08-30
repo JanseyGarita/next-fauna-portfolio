@@ -3,7 +3,7 @@ import { colors } from '@/variables/global'
 const ContactButton = () => {
   return (
     <>
-      <a href="#contact-me">
+      <a href="#contact-me" aria-label="Contact Me">
         <div className="bg-container">
           <svg viewBox="0 0 118 124">
             <polygon

@@ -3,7 +3,6 @@ import css from 'styled-jsx/css'
 
 export const navbarStyles = css.global`
   .navbar-menu {
-    height: 100vh;
     left: 0;
     position: fixed;
     transition: backdrop-filter 0.3s ease;
@@ -24,8 +23,8 @@ export const navbarStyles = css.global`
   .navbar-menu::before {
     background: #f8f8f8;
     content: '';
-    height: 100%;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     transform: translateX(100%);
     transition: transform 0.4s 0.3s ease-out;
     width: 100%;
