@@ -89,10 +89,6 @@ small {
   letter-spacing: 0.015rem;
 }
 
-small {
-  color: #777;
-}
-
 .formatted-text {
   letter-spacing: 0.25rem;
   text-transform: uppercase;
