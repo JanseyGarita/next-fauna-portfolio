@@ -1,4 +1,4 @@
-const { useEffect, useState } = require('react')
+import { useEffect, useState } from 'react'
 
 const useWindowSize = () => {
   const isClient = typeof window != 'undefined'

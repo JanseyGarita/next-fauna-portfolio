@@ -58,7 +58,11 @@ const Navbar = () => {
           </Scrollspy>
         )}
         {width < 992 && (
-          <button className="navbar-toggle" onClick={handleToggle}>
+          <button
+            className="navbar-toggle"
+            onClick={handleToggle}
+            aria-label="Menu"
+          >
             {[...new Array(3)].map((_, index) => (
               <span key={index}></span>
             ))}
