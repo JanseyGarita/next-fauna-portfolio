@@ -43,7 +43,7 @@ const Navbar = () => {
         {ids.length !== 0 && (
           <Scrollspy
             items={ids}
-            offset={0}
+            offset={-100}
             currentClassName="active"
             componentTag="ul"
           >

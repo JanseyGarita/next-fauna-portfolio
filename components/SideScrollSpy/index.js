@@ -47,6 +47,7 @@ const SideScrollSpy = () => {
 
         li a {
           color: ${colors.primary};
+          font-family: 'Times New Roman', Times, serif;
         }
 
         li.is-current a {

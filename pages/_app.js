@@ -1,5 +1,5 @@
 import 'styles/globals.css'
-import 'libraries/bootstrap.min.css'
+import 'lib/bootstrap.min.css'
 import Layout from 'components/Layout'
 
 const App = ({ Component, pageProps }) => {

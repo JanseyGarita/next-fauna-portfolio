@@ -2,6 +2,7 @@ import { spacing } from '@/variables/global'
 import useMessages from 'hooks/useMessages'
 import { useState } from 'react'
 import ActionButton from '../Buttons/ActionButton'
+import Loader from '../Loader'
 import Section from '../Section'
 
 const EntryForm = ({ onSubmit: onSubmitProp }) => {
@@ -13,8 +14,8 @@ const EntryForm = ({ onSubmit: onSubmitProp }) => {
   const [formState, setFormState] = useState('initial')
   const isSubmitting = formState === 'submitting'
 
-  const onSubmit = (ev) => {
-    ev.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
     setFormState('submitting')
     onSubmitProp(values)
@@ -37,42 +38,52 @@ const EntryForm = ({ onSubmit: onSubmitProp }) => {
 
   return (
     <>
-      <form className="my-4" onSubmit={onSubmit}>
+      <form className="my-4" onSubmit={handleSubmit}>
         <label>
           Name
           <input
-            required
             aria-label="Name"
-            placeholder="Sheldon Cooper"
-            value={values.name}
+            disabled={isSubmitting}
             onChange={handleOnChange('name')}
+            placeholder="Sheldon Cooper"
+            required
+            value={values.name}
           />
         </label>
         <label>
           Message
-          <input
-            required
+          <textarea
             aria-label="Message"
-            placeholder="I'm not crazy. My mother had me tested."
-            value={values.message}
+            disabled={isSubmitting}
             onChange={handleOnChange('message')}
+            placeholder="I'm not crazy. My mother had me tested."
+            required
+            rows={5}
+            value={values.message}
           />
         </label>
-        <ActionButton type="submit" disabled={isSubmitting}>
-          Send!
-        </ActionButton>
+        {isSubmitting ? (
+          <Loader />
+        ) : (
+          <ActionButton type="submit" disabled={isSubmitting}>
+            Send!
+          </ActionButton>
+        )}
       </form>
 
       <style jsx>{`
         label {
           display: flex;
+          letter-spacing: 0.035rem;
           flex-direction: column;
           margin: ${spacing.spacing05} 0;
         }
 
-        label input {
+        label input,
+        label textarea {
           border: 1px solid #eaeaea;
-          padding: ${spacing.spacing01} ${spacing.spacing03};
+          letter-spacing: 0.025rem;
+          padding: ${spacing.spacing03} ${spacing.spacing04};
         }
       `}</style>
     </>
@@ -81,6 +92,7 @@ const EntryForm = ({ onSubmit: onSubmitProp }) => {
 
 const ContactMe = () => {
   const { onSubmit } = useMessages()
+
   return (
     <Section
       classNameWrapper="scrollspy"
@@ -90,7 +102,7 @@ const ContactMe = () => {
     >
       <div>
         <p>
-          If you have got any questions please send me an email to{' '}
+          If you have got any questions or want me to work with you, please send me an email to{' '}
           <a href="mailto:janseygarita@gmail.com">janseygarita@gmail.com</a> or
           fill in the contact form below.
         </p>

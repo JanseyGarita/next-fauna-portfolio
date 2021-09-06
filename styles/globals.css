@@ -12,23 +12,27 @@ main {
   min-height: 100vh;
 }
 
-p::selection,
-a::selection,
 h1::selection,
 h2::selection,
 h3::selection,
+h4::selection,
+a::selection,
+p::selection,
 span::selection,
+label::selection,
 text::selection,
 img::selection {
   background-color: khaki;
 }
 
-p::-moz-selection,
-a::-moz-selection,
 h1::-moz-selection,
 h2::-moz-selection,
 h3::-moz-selection,
+h4::-moz-selection,
+a::-moz-selection,
+p::-moz-selection,
 span::-moz-selection,
+label::-moz-selection,
 text::-moz-selection {
   background: khaki;
 }
@@ -70,13 +74,26 @@ section:last-child {
   border-bottom: none;
 }
 
-p {
-  color: #555;
+a,
+p,
+label,
+text,
+small,
+button {
   font-family: sans-serif;
 }
 
+p,
+small {
+  color: #555;
+  letter-spacing: 0.015rem;
+}
+
+small {
+  color: #777;
+}
+
 .formatted-text {
-  font-family: sans-serif;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
 }
@@ -91,7 +108,6 @@ p {
   transition: top 0.3s ease;
   width: 100%;
   will-change: top;
-  z-index: -1;
 }
 
 .animated-hover:hover::before {

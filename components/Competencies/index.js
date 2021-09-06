@@ -23,17 +23,16 @@ const Competencies = () => {
   )
 }
 
-const Box = ({ name, ...rest }) => {
-  return (
-    <div className={`competencies-item ${name}`}>
-      <Image
-        alt="Logo Image"
-        src={`/logos/${name}.png`}
-        priority={true}
-        {...rest}
-      />
-    </div>
-  )
-}
+const Box = ({ name, ...rest }) => (
+  <div className={`competencies-item ${name}`}>
+    <Image
+      alt="Logo Image"
+      priority={true}
+      quality={90}
+      src={`/logos/${name}.png`}
+      {...rest}
+    />
+  </div>
+)
 
 export default Competencies

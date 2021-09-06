@@ -6,24 +6,23 @@ import Footer from 'components/Footer'
 import ContactButton from 'components/Buttons/ContactButton'
 import ContactMe from '../Contact'
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <Navbar />
-      <main className="d-flex">
-        <Sidebar>
-          <SiteLogo />
-          <SideScrollSpy />
-        </Sidebar>
-        <div className="content w-100">
-          {children}
-          <ContactMe />
-        </div>
-        <Sidebar />
-      </main>
-      <ContactButton />
-      <Footer />
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  <>
+    <Navbar />
+    <main className="d-flex">
+      <Sidebar>
+        <SiteLogo />
+        <SideScrollSpy />
+      </Sidebar>
+      <div className="content w-100">
+        {children}
+        <ContactMe />
+      </div>
+      <Sidebar />
+    </main>
+    <ContactButton />
+    <Footer />
+  </>
+)
+
 export default Layout

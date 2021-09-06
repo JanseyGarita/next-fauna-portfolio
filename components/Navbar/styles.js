@@ -120,6 +120,7 @@ export const navbarStyles = css.global`
 export const navlinkStyles = css`
   li {
     margin: ${spacing.spacing04} ${spacing.spacing07};
+    position: relative;
   }
 
   @media (min-width: ${breakpoints.desktop_sm}) {
@@ -132,7 +133,6 @@ export const navlinkStyles = css`
     color: ${colors.primary};
     font-family: sans-serif;
     letter-spacing: 0.055rem;
-    opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
     text-transform: uppercase;
     z-index: 1;
@@ -141,15 +141,5 @@ export const navlinkStyles = css`
   li.active a,
   a.active {
     font-weight: 600;
-  }
-
-  li.active a,
-  a.active,
-  a:hover {
-    opacity: 1;
-  }
-
-  a.active {
-    pointer-events: none;
   }
 `

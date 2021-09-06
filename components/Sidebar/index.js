@@ -1,32 +1,30 @@
 import { breakpoints, spacing } from '@/variables/global'
 
-const Sidebar = ({ classNameWrapper = '', children }) => {
-  return (
-    <>
-      <aside className={classNameWrapper}>{children}</aside>
+const Sidebar = ({ classNameWrapper = '', children }) => (
+  <>
+    <aside className={classNameWrapper}>{children}</aside>
 
-      <style jsx>{`
+    <style jsx>{`
+      aside {
+        border-right: 1px solid #eaeaea;
+        border-left: 1px solid #eaeaea;
+        display: none;
+        height: auto;
+        left: 0;
+        min-width: 96px;
+        padding: ${spacing.spacing06} 0;
+        position: relative;
+        top: 0;
+      }
+
+      @media (min-width: ${breakpoints.desktop_sm}) {
         aside {
-          border-right: 1px solid #eaeaea;
-          border-left: 1px solid #eaeaea;
-          display: none;
-          height: auto;
-          left: 0;
-          min-width: 96px;
-          padding: ${spacing.spacing06} 0;
-          position: relative;
-          top: 0;
+          display: block;
+          z-index: 1;
         }
-
-        @media (min-width: ${breakpoints.desktop_sm}) {
-          aside {
-            display: block;
-            z-index: 1;
-          }
-        }
-      `}</style>
-    </>
-  )
-}
+      }
+    `}</style>
+  </>
+)
 
 export default Sidebar
