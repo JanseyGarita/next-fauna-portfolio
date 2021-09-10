@@ -9,6 +9,11 @@ const Index = () => (
   <>
     <Head>
       <title>Jansey Garita - Front-End Developer</title>
+      <link rel="shortcut icon" href="/icons/alien.png" type="image/x-icon" />
+      <meta
+        name="description"
+        content="I'm a Front-End developer based in the beautiful Costa Rica. I build awesome pixel-perfect and high-performance websites."
+      />
     </Head>
     <Hero title="Jansey Garita">
       <p className="text-center formatted-text">Front-End Developer</p>
@@ -29,9 +34,10 @@ const Index = () => (
     </Section>
     <Section classNameWrapper="scrollspy" title="What I do" number="03">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam
-        facere possimus, iusto ex nam error soluta nisi dicta aut perferendis,
-        quod non quis harum?
+        I enjoy bringing ideas to life in the browser. I always commit to
+        projects, since in each project, there is always something new to learn,
+        and I love seeing how my creations help improve businesses and make
+        other people&apos;s work easier.
       </p>
       <div>
         <Projects />

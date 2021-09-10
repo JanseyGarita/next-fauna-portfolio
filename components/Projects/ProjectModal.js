@@ -23,9 +23,11 @@ const ProjectModal = ({ id, handleClose, ...rest }) => {
           <div className="modal-body my-3">
             <p>{description}</p>
           </div>
-          <div className="modal-footer p-4">
-            <ExternalLink link={url}>Launch the site</ExternalLink>
-          </div>
+          {url && (
+            <div className="modal-footer p-4">
+              <ExternalLink link={url}>Launch the site</ExternalLink>
+            </div>
+          )}
         </div>
       </div>
       <style jsx>{`

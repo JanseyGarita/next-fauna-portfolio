@@ -3,7 +3,7 @@ import css from 'styled-jsx/css'
 
 export const competenciesStyles = css.global`
   .competencies-section {
-    margin: 0 auto;
+    margin: ${spacing.layout03} auto;
     max-width: 940px;
     width: 100%;
   }

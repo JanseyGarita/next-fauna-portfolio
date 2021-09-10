@@ -6,10 +6,13 @@ import projects from 'content/projects'
 
 const Projects = () => (
   <>
-    <div className="row justify-content-center">
+    <div className="row justify-content-start">
       {projects.map((project) => (
         <Project key={project.title} {...project} />
       ))}
+      <div className="col-sm-6 d-flex align-items-center">
+        <h4 className="w-100 text-center">More projects coming soon...</h4>
+      </div>
     </div>
   </>
 )

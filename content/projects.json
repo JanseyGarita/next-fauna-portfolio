@@ -2,29 +2,22 @@
   {
     "title": "If-Blog",
     "tag": "Drupal",
-    "description": "Lorem ipsum dolor sit amet.",
+    "description": "The description is not ready yet :c But you can already preview the demo site.",
     "src": "/projects/ifblog.png",
     "url": "https://dev-if-blog.pantheonsite.io/"
   },
   {
     "title": "Ticommerce",
     "tag": "Vue.js",
-    "description": "Lorem ipsum dolor sit amet.",
+    "description": "The description is not ready yet :c But you can already preview the demo site.",
     "src": "/projects/Ticommerce.png",
     "url": "https://midominioucr.000webhostapp.com"
   },
   {
     "title": "Milestones visualization",
     "tag": "React.js + GraphQL + D3.js",
-    "description": "Lorem ipsum dolor sit amet.",
+    "description": "The description is not ready yet. But you can already preview the site :)",
     "src": "/projects/BubbleChart.png",
     "url": "https://www.200costarica.go.cr/nuestra-historia"
-  },
-  {
-    "title": "Companies Chart",
-    "tag": "Svelte + D3.js",
-    "description": "Lorem ipsum dolor sit amet.",
-    "src": "/projects/OrgChart.png",
-    "url": "#!"
   }
 ]
